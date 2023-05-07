@@ -1,0 +1,128 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color:#101010;
+    min-height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+.wrapper{
+    margin-bottom: auto;
+    text-align: center;
+}
+.wrapper h2{
+    color: #7b42bc;
+    margin:40px 0;
+    font-size:2.5rem;
+}
+.wrapper img{
+    width:900px;
+    max-width:95%;
+}
+.wrapper h4{
+    color: #fff;
+    margin:40px 0 20px;
+    font-size:1.2rem;
+}
+.main-btn{
+    padding:15px;
+    background-color: #6d16cb;
+    color:#fff;
+    border:none;
+    font-weight:700;
+    letter-spacing: 1px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+@media (max-width:767px){
+
+    .wrapper h2{ 
+        font-size:2rem;
+    }
+    .wrapper h4{ 
+        font-size:1rem;
+    }
+    
+}
+
+
+/*project*/
+body{
+    margin:0;
+    padding:0;
+    font-family: 'Tomorrow', sans-serif;
+    height:100vh;
+  background-image: linear-gradient(to top, #2e1753, #1f1746, #131537, #0d1028, #050819);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+  }
+  .text{
+    position:absolute;
+    top:10%;
+    color:rgb(117, 70, 218);
+    text-align:center;
+  }
+  h1{
+    font-size:50px;
+  }
+  .star{
+    position:absolute;
+    width:4px;
+    height:4px;
+    background:rgb(79, 2, 160);
+    right:0;
+    animation:starTwinkle 3s infinite linear;
+  }
+  .laptop img{
+    width:380px;
+    position:absolute;
+    top:55%;
+    animation:laptopFly 6s infinite linear;
+  }
+  @keyframes laptopFly{
+    0%{
+      transform:rotate(100deg);
+      left:-100px;
+    }
+    25%{
+      top:50%;
+      transform:rotate(10deg);
+    }
+    50%{
+      transform:rotate(-95deg);
+      top:55%;
+    }
+    75%{
+      top:60%;
+      transform:rotate(-180deg);
+    }
+    100%{
+      left:110%;
+      transform:rotate(-240deg);
+    }
+  }
+  @keyframes starTwinkle{
+    0%{
+       background:rgba(133, 36, 217, 0.867);
+    }
+    25%{
+      background:rgba(83, 4, 157, 0.89);
+    }
+    50%{
+     background:rgb(92, 10, 180);
+    }
+    75%{
+      background:rgba(94, 12, 201, 0.8);
+    }
+    100%{
+      background:rgba(255,255,255,0.4);
+    }
+  }

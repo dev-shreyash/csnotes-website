@@ -1,0 +1,58 @@
+@media screen and (max-width: 970px) {
+    .menu-items{
+        backdrop-filter: blur(12px);
+    } 
+    body {
+      outline: 0;
+      line-height: 1.5rem;
+      font-family: 'Poppins', sans-serif;
+      background: #131417;
+      color: #ffffff;
+      min-height: 100%;
+      display: flex;
+      /* margin-top: 60px; */
+      position: relative;
+      flex-direction: column;
+      animation: fadeInUp 3s ease-out;
+      transition: all 3s ease-in-out;
+  
+      
+  }
+}
+body {
+    outline: 0;
+    line-height: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    background: #131417;
+    color: #ffffff;
+    min-height: 100%;
+    display: flex;
+    /* margin-top: 60px; */
+    position: relative;
+    flex-direction: column;
+    animation: fadeInUp 1s ease-out;
+    transition: all 0.3s ease-in-out;
+
+    
+}
+
+
+/*==== FADE IN UP ===*/
+@-webkit-keyframes fadeInUp {
+    0% {
+      opacity: 0;
+     
+    }
+  
+   100% {
+      opacity: 1;
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+  
+  
+  .fadeInUp {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+  }

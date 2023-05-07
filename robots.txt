@@ -1,0 +1,3 @@
+User-Agent: *
+Crawl-Delay: 20
+Sitemap: https://csnotes.online/sitemap.xml
