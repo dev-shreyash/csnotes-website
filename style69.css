@@ -212,8 +212,8 @@ span{
 .menu-items li a:hover {
   font-weight:600;
   padding: 0.1rem 0.2rem;
-  transition: all 0.5s ease-in-out;
-  letter-spacing: 2px;
+  transition: all 0.2s ease-in-out;
+  letter-spacing: 1.4px;
   color: #6d16cb;
 }
 .menu-items li a ul:hover ul {
@@ -278,7 +278,7 @@ padding-top: -20px;
   justify-content: space-between;
   width: 100%;
 }
-.dropdown:hover .dropdown-menu {
+.dropdown:focus-within .dropdown-menu {
 
   padding: 0.1rem 0.2rem;
   transition: all 0.25s ease;
@@ -289,16 +289,16 @@ padding-top: -20px;
   opacity: 1;
   visibility: visible;
 }
-.dropdown:hover .dropdown-menu ul{
+.dropdown:focus-within .dropdown-menu ul{
   transition: all .5s ease;
   top: 0;
 }
-.dropdown:hover .dropdown-menu ul{
+.dropdown:focus-within .dropdown-menu ul{
 transition: all .05s ease;
 top: 0;
 border-bottom-color:#6d16cb ;
 }
-.dropdown-right:hover .menu-right {
+.dropdown-right:focus-within .menu-right {
   background:0, 0, 0, .70;
   backdrop-filter: blur(50px);
   left: 100%;
