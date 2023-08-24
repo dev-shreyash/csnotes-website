@@ -75,7 +75,7 @@ window.addEventListener('scroll', function() {
 
 
  // Define an array of sensitive words to hide
- var sensitiveWords = ["shreyash", "bhosale", "prathmesh", "mayur","Ashwin","Kumar","Soham","ayush","shyam","DEEPAK","CHAURASIYA","KAUSHIK","MOURYA","EKLAKH","ANSARI","KEDAR","PRATHAMEESH","PRATHAMESH","RITESH","SHARMA"];
+ var sensitiveWords = ["shreyash", "bhosale", "prathmesh", "mayur","Ashwin","Kumar","Soham","ayush","shyam","DEEPAK","CHAURASIYA","KAUSHIK","MOURYA","EKLAKH","ANSARI","KEDAR","pedophile","pedo","kalal","loda","louda","bhostiwala","PRATHAMEESH","PRATHAMESH","RITESH","SHARMA","developer","daksh",];
 
  // Define a function to hide sensitive words in a given string
  function hideSensitiveWords(str) {
