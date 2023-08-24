@@ -56,6 +56,31 @@
     <title>Computer science notes</title>
   </head>
   <body>
+
+
+
+
+    
+    <script>
+  // Get all the links in the document
+  var links = document.getElementsByTagName("a");
+
+  // Loop through each link and add an event listener
+  for (var i = 0; i < links.length; i++) {
+    links[i].addEventListener("click", function (event) {
+      // Prevent the default action of the link
+      event.preventDefault();
+    });
+  }
+</script>
+<style>
+  a {
+    pointer-events: none;
+  }
+</style>
+
+
+
     
     <!-- navbar start -->
     <header class="header
@@ -64,7 +89,7 @@
       <div class="menu-btn">
         <div class="menu-btn__lines"></div>
       </div>
-   <!--   <ul class="menu-items">
+      <ul class="menu-items">
         <li><a href="index.html" class="menu-item">Home</a></li>
         <li class="dropdown">
           <a href="#" class="menu-item expand-btn">Subject
@@ -162,7 +187,7 @@
                 <li><a href="semester-6-eh.html" class="menu-item"> Ethical Hacking</a></li>
               </ul>
             </li>
-            <!--<li><a href="#" class="menu-item">more</a></li>-->
+            <li><a href="#" class="menu-item">more</a></li>
           </ul>
         </li>
         <li class="dropdown">
@@ -191,7 +216,7 @@
         <li><a href="index-about.html" class="menu-item">About</a></li>
         <li><a href="index-contact.html" class="menu-item">Contact</a></li>
         <li><a href="index-feedback.html" class="menu-item">Feedback</a></li>
-      </ul>-->
+      </ul>
      
    </header>
   
