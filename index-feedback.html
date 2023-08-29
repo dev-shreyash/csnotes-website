@@ -29,6 +29,9 @@
       integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
       crossorigin="anonymous"
     />
+    <script src="secure.js" defer></script>
+    <link rel="stylesheet" href="secure.css"/>
+
     <script src="https://www.gstatic.com/firebasejs/7.9.3/firebase.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
@@ -176,9 +179,15 @@
       </ul>
     </header>
     <!-- navbar ends -->
+   <!-- navbar ends -->
 
 <!-- main body content here -->
-    
+<body class="body">
+  <div id="passkey-container">
+    <div box="passkey-box">
+    <input type="password" id="passkey-input" placeholder="Enter password">
+    <button id="passkey-submit">Submit</button></div>
+</div>
    <!--- <div data-tf-widget="BRFY8TPa" data-tf-opacity="83" data-tf-hide-headers data-tf-iframe-props="title=CSNotes Website Feedback Survey Template" data-tf-medium="snippet" style="width:100%;height:400px;"></div><script src="//embed.typeform.com/next/embed.js"></script>-->
     <div class="feedback-page">
     <h2 class="feedback-comment"><a href="#comment-form">Click to comment </a> </h2>
