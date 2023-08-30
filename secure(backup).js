@@ -38,7 +38,26 @@ function enableButtonsAndAnchors() {
         anchor.style.pointerEvents = "auto";
     });
 }
+// Function to disable text selection
+function disableTextSelection() {
+    // For modern browsers
+    document.documentElement.style.userSelect = 'none';
 
+    // For older versions of Internet Explorer
+    document.documentElement.style.msUserSelect = 'none';
+}
+
+// Function to enable text selection
+function enableTextSelection() {
+    // For modern browsers
+    document.documentElement.style.userSelect = 'auto';
+
+    // For older versions of Internet Explorer
+    document.documentElement.style.msUserSelect = 'text';
+}
+
+// Call the function to disable text selection
+disableTextSelection();
 // Check if a passkey cookie exists
 const passkeyCookie = getCookie("passkey");
 if (passkeyCookie) {
@@ -60,7 +79,8 @@ if (passkeyCookie) {
         // You should implement your own logic to validate the passkey.
         // For example, you can check if the entered passkey matches a predefined value.
 
-        if (enteredPasskey === "______") {
+        if (enteredPasskey === "-----") {     
+            enableTextSelection();
             enableButtonsAndAnchors();
             // Store the passkey in a cookie that expires when the browser is closed.
             setCookie("passkey", enteredPasskey, 0);
@@ -75,7 +95,6 @@ document.documentElement.style.webkitUserSelect = 'auto';
 document.documentElement.style.MozUserSelect = 'auto';
 document.documentElement.style.msUserSelect = 'auto';
 document.documentElement.style.userSelect = 'auto';
-
 
 
 
@@ -110,3 +129,5 @@ window.onload = function () {
         }
     });
 };
+
+
