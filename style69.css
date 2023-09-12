@@ -792,6 +792,8 @@ footer p{
     /* margin: -25px 2px; */
   }
   p.comment-text{
+    overflow-wrap: break-word;
+    text-wrap: wrap;
     max-width: 90%;
   }
 /*searchbar*/
@@ -1127,7 +1129,7 @@ h1.contact-h1 {
 /* feedback page */
 .feedback-com{
   max-width: 60rem;
-  margin: auto;
+  /* margin: auto; */
 }
 .feedback-comment{
  
