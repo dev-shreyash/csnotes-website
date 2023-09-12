@@ -721,7 +721,7 @@ footer p{
   }
   .feedback-com{
     max-width: 60rem;
-    margin: 0; 
+    margin: 0 !important; 
   }
   
   .header.scrolled a {
