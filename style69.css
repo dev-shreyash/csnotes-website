@@ -719,6 +719,9 @@ footer p{
     z-index: 999;
   
   }
+  .feedback-com{
+    max-width: 60rem;
+    margin: 0; 
   
   .header.scrolled a {
     font-size: 18.4px;
@@ -1129,7 +1132,7 @@ h1.contact-h1 {
 /* feedback page */
 .feedback-com{
   max-width: 60rem;
-  /* margin: auto; */
+  margin: auto; 
 }
 .feedback-comment{
  
