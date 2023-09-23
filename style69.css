@@ -1730,6 +1730,10 @@ p.dis-program-code-name {
   background-color: #1D1E22;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
 }
+.comment a{
+  color: #2196f3;
+}
+
 
 .comment-name {
   color: transparent;
