@@ -91,7 +91,7 @@ window.addEventListener('scroll', function() {
  }
 
 
- const elements = document.querySelectorAll("p, .contact, h1");
+ const elements = document.querySelectorAll("p, .contact");
 
  // Iterate over the elements and hide sensitive words in their text content
  elements.forEach(function(element) {
