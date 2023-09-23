@@ -91,7 +91,12 @@ window.addEventListener('scroll', function() {
  }
 
 
+ const elements = document.querySelectorAll("p, a, h1");
 
+ // Iterate over the elements and hide sensitive words in their text content
+ elements.forEach(function(element) {
+   element.textContent = hideSensitiveWords(element.textContent);
+ });
 
 
 //  function searchPrograms() {
