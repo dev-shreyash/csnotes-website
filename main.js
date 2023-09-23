@@ -411,11 +411,21 @@ function addComment() {
       nameSpan.classList.add("comment-name");
       nameSpan.textContent = hideSensitiveWords(comment.name);
 
-      // Create a new p element to hold the comment text
-      var commentP = document.createElement("p");
-      commentP.classList.add("comment-text");
-      commentP.textContent = hideSensitiveWords(comment.comment);
+     // Create a new p element to hold the comment text
+    var commentP = document.createElement("p");
+    commentP.classList.add("comment-text");
 
+    // Check if the comment contains "https://"
+    if (comment.comment.includes("https://")) {
+      // Create an anchor (a) element
+      var link = document.createElement("a");
+      link.href = comment.comment; // Set the href attribute to the URL
+      link.textContent = comment.comment; // Set the link text to the URL
+      commentP.appendChild(link);
+    } else {
+      // If the comment does not contain "https://", hide sensitive words
+      commentP.textContent = hideSensitiveWords(comment.comment);
+    }
      
       
      
