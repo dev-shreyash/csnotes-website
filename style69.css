@@ -1086,7 +1086,7 @@ i.fas.fa-angle-right {
   border-radius: 6px;
   cursor: pointer;
   margin: auto;
-	animation: blink 1s linear infinite;
+/* 	animation: blink 1s linear infinite; */
 	}
 @keyframes blink{
 0%{opacity: 0;}
@@ -1094,7 +1094,7 @@ i.fas.fa-angle-right {
 100%{opacity: 1;}
 }
 .main-btn-program2 {
-  --borderWidth: 3px;
+  --borderWidth: 2.6px;
   background: #1D1F20;
   position: relative;
   border-radius: var(--borderWidth);
