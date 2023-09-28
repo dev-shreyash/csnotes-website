@@ -43,7 +43,12 @@ p{
   margin: auto;
   padding: 0;
 }
-
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #131417; /* Dark background color */
+    color: #ffffff; /* Light text color */
+  }
+}
 body {
   /* margin-top: 60px; */
   outline: 0;
