@@ -410,6 +410,7 @@ img{
 }
 
   .info {
+    user-select: none;
     margin-top: 18px;
    position:static;
    background-color: #1d1e222b;
@@ -493,7 +494,9 @@ svg {
   border-bottom: 5px solid #f16;
 }
 
-
+.main-disco{
+  user-select: none;
+}
 .draw-lines {
   stroke-dasharray: 260;
   stroke-dashoffset: 260;
@@ -733,6 +736,7 @@ footer p{
   animation: dash 4s ease-in alternate infinite;
 }
   .main-disco p {
+    user-select: none;
     line-height: 1.5;
     padding: 0px 20px;
     font-size: smaller;
