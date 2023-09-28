@@ -48,7 +48,7 @@ p{
     background-color: #131417; /* Dark background color */
     color: #ffffff; /* Light text color */
   }
-}
+
 body {
   /* margin-top: 60px; */
   outline: 0;
@@ -2581,4 +2581,5 @@ p.faq__answer {
   padding-left: 0px;
   font-size: 18px;
   display: block;
+}
 }
