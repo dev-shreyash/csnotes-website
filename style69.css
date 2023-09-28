@@ -1005,6 +1005,12 @@ i.fas.fa-angle-right {
     filter: brightness(100%);
   }
 
+  canvas {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -1;
+  }
 @media screen and (max-width: 470px) {
   /*html, body{
     width: 100%;
@@ -1717,7 +1723,7 @@ form button[type="submit"] {
   max-width: 80%;
   margin: auto auto 19px;
   padding: 15px;
-  background-color: #1D1E22;
+  background-color: #1d1e225e;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
 }
 
@@ -1742,7 +1748,7 @@ margin-top: 0;
     right: 0;
     /* margin: 0; */
     margin-left: 0px;
-    background-image:linear-gradient(to bottom, #bd707000,rgb(136 136 136 / 0%), #121212);
+    background-image:linear-gradient(to bottom, #bd707000,rgb(136 136 136 / 0%), #121212ce);
     width: 100%;
     overflow-y: scroll;
     padding: 20px;
@@ -1787,7 +1793,10 @@ p.dis-program-code-name {
   margin: 0;
   
 }
-
+.hljs {
+  
+  background: #030b1747 !important;
+}
 #success-message {
   /* Add your styles here */
   left: 0;
@@ -1809,7 +1818,7 @@ p.dis-program-code-name {
   width: 90%;
   margin: auto auto 19px;
   padding: 20px;
-  background-color: #1D1E22;
+  background-color: #33353f2b;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
 }
 .comment a{
