@@ -13,7 +13,7 @@ window.onresize = function() {
 
 var addStar = 0;
 var stars = [];
-var totalStars = 8; // spawns stars at start
+var totalStars = 0; // spawns stars at start
 var mousePos = {
   x: canvas.width * 0.5,
   y: canvas.height * 0.5
@@ -32,7 +32,7 @@ function pushStar() {
     y: mousePos.y + 20 * (Math.random() - 0.5),
     Vx: 0,
     Vy: 0,
-    r: 35 * Math.random() + 3,  // random size
+    r: 25 * Math.random() + 3,  // random size
     color: randomColor // use the selected custom color
   });
 }
