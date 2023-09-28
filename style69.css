@@ -374,7 +374,7 @@ img{
   .info body {
     
     display: flex;
-    background-color: #131212;
+    background-color: #13121200;
     color: #000000;
     font-family: sans-serif;
   }
@@ -389,7 +389,7 @@ img{
     padding: 10px 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.544);
     color: #9b59b6;
-    background-color: #171b20;
+    background-color: #171b2061;
   }
   .info h1{
     margin-top: 10px;
@@ -399,7 +399,7 @@ img{
     box-shadow: 0 2px 4px rgb(0 0 0 / 50%);
     border: 2px solid transparent;
     border-radius: 10px;
-    background: linear-gradient(to right, #000000, #4b0ba6);
+    background: linear-gradient(to right, #0000007a, #4c0ba672);
     background-size: 400% 400%;
     padding: 15px;
 }
@@ -407,7 +407,7 @@ img{
   .info {
     margin-top: 18px;
    position:static;
-   background-color: #1D1E22;
+   background-color: #1d1e222b;
    /* background-image: linear-gradient(to top,#131313, #4a83c329, #101010); */
     /* background-color: rgba(0, 0, 0, 0.6); */
     background-position: center;
@@ -460,6 +460,61 @@ img{
   animation: textAnimation 6s ease infinite;
 
 }
+
+/*animated text*/
+.border {
+ 
+  position: relative;
+}
+svg {
+  margin: 50px 0 -50px 0;
+  right: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* margin: auto; */
+  /* width: 100%; */
+  position: relative;
+}
+.border:hover::after {
+  padding: 10px;
+  content: '';
+  position: absolute;
+  width: 100%;
+  color: #00BCD4;
+  height: 0;
+  left: 0;
+  bottom: -5px;
+  /*Change this to increase/decrease distance*/
+  border-bottom: 5px solid #f16;
+}
+
+
+.draw-lines {
+  stroke-dasharray: 260;
+  stroke-dashoffset: 260;
+  animation: dash 5s ease-in forwards;
+  animation: dash 4s ease-in alternate infinite;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 @keyframes textAnimation {
   0% {
@@ -660,6 +715,18 @@ footer p{
 /*     margin: 0; */
    
   }
+  /*animated text*/
+.border {
+ 
+  position: relative;
+}
+.draw-lines {
+  font-size: 9vw;
+  stroke-dasharray: 260;
+  stroke-dashoffset: 260;
+  animation: dash 5s ease-in forwards;
+  animation: dash 4s ease-in alternate infinite;
+}
   .main-disco p {
     line-height: 1.5;
     padding: 0px 20px;
