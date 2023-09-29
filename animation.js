@@ -36,6 +36,19 @@ function pushStar() {
     color: randomColor // use the selected custom color
   });
 }
+let mouseClickTime = 0;
+
+// Remove stars after a certain time interval
+const removeStarsInterval = setInterval(function () {
+  if (stars.length > 0 && Date.now() - mouseClickTime > 1000) {
+    stars.pop(); // Remove the last star from the array
+  }
+}, 250); // Remove a star every 1 second
+
+// Stop removing stars if the mouse is clicked
+document.addEventListener("mousedown", function () {
+  mouseClickTime = Date.now();
+});
 
 //spawns stars
 for (var i = 0; i < totalStars; i++) {
@@ -49,6 +62,9 @@ document.addEventListener("mousedown", function() {
     stars[i].Vy += 3 * Math.sin(Math.atan2(stars[i].y - mousePos.y, stars[i].x - mousePos.x));
   }
 });
+  setTimeout(function(index) {
+    stars.splice(index, 1);
+  }, Math.random() * 3000 + 2000, i); // Random time between 2 to 5 seconds
 
 // waits for mouse move and then updates position
 document.addEventListener('mousemove', function(evt) {
@@ -101,3 +117,27 @@ function draw() {
   requestAnimationFrame(draw);
 }
 requestAnimationFrame(draw);
+
+
+
+
+// Set the canvas size
+ctx.canvas.width = window.innerWidth;
+ctx.canvas.height = window.innerHeight;
+
+// Spawns stars with initial random positions and velocities
+for (var i = 0; i < 60; i++) {
+  
+  stars.push({
+    
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height,
+    Vx: (Math.random() - 0.5) * 4, // Random velocity in the X direction (-2 to 2)
+    Vy: (Math.random() - 0.5) * 4, // Random velocity in the Y direction (-2 to 2)
+    r: 25 * Math.random() + 3,  // Random size
+    color: customColors[Math.floor(Math.random() * customColors.length)] // Random color
+  });
+
+}
+
+
