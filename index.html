@@ -10,6 +10,14 @@
 
   gtag('config', 'G-1F3B8F1NWS');
 </script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Observer.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
+
+
+<!-- RoughEase, ExpoScaleEase and SlowMo are all included in the EasePack file -->    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/EasePack.min.js"></script>
      <meta charset="UTF-8" />
      <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
      <!-- <meta http-equiv="Content-Security-Policy" content="Content-Security-Policy: base-uri 'self'; style-src *; font-src *; connect-src *; 'nonce ABC123' https://*unpkg.com/aos@next/dist/aos.css https://*cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css https://*fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap https://*unpkg.com/aos@next/dist/aos.js  ;" /> -->
@@ -51,6 +59,7 @@
      crossorigin="anonymous"></script>                                         
     <link rel="stylesheet" href="homepage.css"/>
     <script src="main.js" defer></script>
+   
     <script defer src="ap.js"></script>
     <script src="animation.js" defer></script>
 
@@ -86,12 +95,12 @@
     <!-- navbar start -->
     <header class="header
     ">
-      <a href="index.html" class="logo"><strong>CS<span>Notes</span></strong></a>
+      <a href="index.html" class="logo1"><strong>CSNotes</strong></a>
       <div class="menu-btn">
         <div class="menu-btn__lines"></div>
       </div>
   <ul class="menu-items">
-    <li><a href="https://drive.google.com/drive/folders/1zdoqLgcGg3_YanywocJs9SLXpJNdFrpt?usp=sharing" title="Click me"><div class="main-btn-program2">Prac Exam (Drive)</div></a> </li>
+    <!-- <li><a href="https://drive.google.com/drive/folders/1zdoqLgcGg3_YanywocJs9SLXpJNdFrpt?usp=sharing" title="Click me"><div class="main-btn-program2">Prac Exam (Drive)</div></a> </li> -->
 
         <li><a href="index.html" class="menu-item">Home</a></li>
         <li class="dropdown">
@@ -215,7 +224,7 @@
             </li>
           </ul>
         </li>
-        <li><a href="other-code-space.html" title="Go To CodeSpace"><i class="fa fa-share-square" aria-hidden="true"></i> CodeSpace</a></li>
+        <li><a href="other-code-space.html" title="Go To CodeSpace" class="menu-item"> CodeSpace</a></li>
         <li><a href="index-about.html" class="menu-item">About</a></li>
         <li><a href="index-contact.html" class="menu-item">Contact</a></li>
         <li><a href="index-feedback.html" class="menu-item">Feedback</a></li>
@@ -225,70 +234,83 @@
   
   
     <canvas id="myCanvas"></canvas>
-<!-- ... -->
+
+      <br>
+      <div class="container12">
+      <div class="homepage12" id="content12">
+       
+          <div class="mainlogo">
+            <p id="logo">CS<span>Notes</span>
+            <br>
+          <br></p>
+            Error in studies;
+           </div>
+      </div>
     
-    <div class="main-disco">
+          
+      <div class="homepage" id="content13">
+
+        
+    </div>
+    <div class="homepage" id="content14">
+         
+
+    </div>
+    <div class="homepage" id="content15">
+     
+
+
+    </div>
+    <div class="homepage" id="content16">
+       
+
+    </div>
+    <div class="homepage" id="content17">
+     
+
+      
+    </div>
+  </div>
+<!-- ... -->
+<!-- <div class="smooth-content">
+    <div class="log">Computer science</div>
+   
+</div>
+<div class="el1"><p>
+  The wisdom that humanity has kept stored in disks.
+</p></div> -->
+
+<!-- <div class="container">
+  <div class="item" id="it1"></div>
+  <div class="item" id="it2"></div>
+  <div class="item" id="it3"></div>
+  <div class="item" id="it4"></div>
+  <div class="item" id="it5"></div>
+  <div class="item" id="it6"></div>
+  <div class="item" id="it7"></div>
+  <div class="item" id="it8"></div>
+  <div class="item" id="it9"></div>
+  <div class="item" id="it10"></div>
+</div> -->
+    <!-- <div class="main-disco">
       <div class="disco"data-aos="fade-dowm"></div> 
       <div class="text"data-aos="zoom-out-up"><p>समय बेहरा हे. वो किसीकी नहीं सुनता, पर वो नपुंसक नहीं है. सबकी गांड मारता.</p></div>
       <div class="disco"></div> 
-    </div>
-      <div class="info" data-aos="fade-up">
-        <div class="frame-border"><img loading="lazy" src="images/frame-border.webp" alt="frame" class="img-col"></div>
-        <svg xmlns="http://www.w3.org/2000/svg" width="600" height="100">
-          <text class = 'draw-lines' x="300" y="30" stroke = '#00BCD4' stroke-width = '3' stroke-linecap="square"
-              fill = none font-family="Arial Black, Gadget, sans-serif" font-size="58" text-anchor="middle" alignment-baseline="middle">
-          Computer Science </text>
-          <text class = 'draw-lines' x="300" y="75" stroke = '#00BCD4' stroke-width = '3' stroke-linecap="square"
-              fill = none font-family="Arial Black, Gadget, sans-serif" font-size="50" text-anchor="middle" alignment-baseline="middle">
-      Sucks my dick </text>
-        </svg>
-      
-        <h1>Sab changaashi cho..... sab chalu hai..         <span><a href="index.html">csnotes.online</a></span></h1>
-         <span><h1>बिल्लो बागे बिल्लियाँ दा की करेंगी?
-बग्गे बग्गे बिल्लियां दा की करेंगी
-बिल्लो बागे दिल्लियाँ दा कि करेंगी
-नि मेरा मर्दा उबले
-ख़ून अंग-अंग टन
-हो हो ऊ..
- <br>
-काले जे लिबास दी शौकीनन कुड़ी
-दर-दर जावे मेरे काले रंग टन
-काले जे लिबास दी शौकीनां कुड़ी
-दर-दर जावे मेरे काले रंग टन ऊ..</h1></span> 
-
-      <p>A website with the sole purpose of offering top-notch computer science notes.</p>
-
-    <p>We want everyone to be able to access and comprehend the sophisticated ideas of computer science.</p>
-      <h2>Our Notes</h2>
-      <p>On This website, you will find a wide variety of notes covering a range of computer science topics, including programming languages, algorithms, data structures, computer networks, databases, and much more.</p>
-      <p>Notes are written by experienced professionals and professors, and are designed to be concise and to the point, making it easy for you to learn and retain the material.</p>
-      <h2>Other Resources</h2>
-      <p>In addition to our notes, we also offer a range of other resources, such as practicals and assignment problems and Question Banks, to help you test your understanding and apply what you have learned.</p>
-      <p>Whether you are a student looking to supplement your studies or a professional seeking to refresh your knowledge or learn new skills, CSNotes has something for you.</p>
-      <p>Thank you for visiting CSNotes. We hope you find our notes and resources helpful and that they contribute to your success in computer science.</p>
-    </div>
-    <div class="goto-comment">
-      <p>We encourage You to interact with us and the CS  community by following this link : <a href="index-feedback.html">Comment Your Feedback</a> to our feedback page, where you can post your questions, share ideas, and collaborate with others</p>
     </div> -->
-    <br>
-    <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5371412526023784"
-     crossorigin="anonymous"></script> -->
-      <!-- AD  -->
-<!-- <ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-5371412526023784"
-     data-ad-slot="3204950511"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script> --> 
- <div class="para">
+<!--      
+        <svg xmlns="http://www.w3.org/2000/svg" width="900" height="700">
+          <text class = 'draw-lines' x="300" y="90" stroke = '#00BCD4' stroke-width = '3' stroke-linecap="square"
+              fill = none font-family="Arial Black, Gadget, sans-serif" font-size="218" text-anchor="middle" alignment-baseline="middle">
+          CSnotes </text>
+        </svg></div> -->
+        <!---
+       
+ <div class="para" id="content12">
     <p>Follow Below given Links to your desired notes : </p>
   </div>
     <br>
     <div class="main-homepage">
-    <div class="homepage">
+    <div class="homepage" >
         <p class="drop-down-home" ><a href="#">Semester 1</a></p>
         <ul class="folded">
           <li><a href="semester-1-cod.html" class="menu-item">> Computer Organization and Design</a></li>
@@ -366,7 +388,7 @@
 <p> Are you searching for syllabus? </p>
 <p> <a href="other-syllabus.html"> Click here to get syllabus of Bsc CS</a></p>
  </div>   
- <br>
+ <br><!--
  <div class="cs">
   <p>Studying Computer Science you may got questions like what is computer science?, why should i study it? where we going to apply? so we've write this article so you can get your answers.</p><br>
 
@@ -437,7 +459,7 @@
     <br>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5371412526023784"
      crossorigin="anonymous"></script>
-<!-- AD -->
+
 <ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-5371412526023784"
@@ -447,7 +469,8 @@
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-<!-- main body content ends -->
+</div>
+main body content ends -->
     <!-- footer starts -->
   <footer class="sticky-footer">
       <div class="footer-logo">
@@ -462,15 +485,15 @@
          <p>Copyright © 2022 CSNotes.  Developed by Shreyash Bhosale</p>
   </footer>
   <!-- footer ends -->
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </script>
 <link rel="stylesheet" href="aos-by-red.css">
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script nonce="ABC123">
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script> -->
+<!-- <script nonce="ABC123">
   AOS.init({
-    duration: 1000,
+    duration: 500,
     once: true,
   });
-</script>
+</script> -->
   </body>
 </html>

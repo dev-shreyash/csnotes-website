@@ -126,7 +126,7 @@ ctx.canvas.width = window.innerWidth;
 ctx.canvas.height = window.innerHeight;
 
 // Spawns stars with initial random positions and velocities
-for (var i = 0; i < 60; i++) {
+for (var i = 0; i < 0; i++) {
   
   stars.push({
     
@@ -141,3 +141,43 @@ for (var i = 0; i < 60; i++) {
 }
 
 
+
+ // This tween will rotate an element with a class of .my-element
+ gsap.from('.menu-item', {
+  y:-90,
+ duration:2,
+ sttager:2,
+
+  // ease: Power1.easeInOut
+ })
+
+ gsap.from('.log', {
+  y:90,
+ duration:2,
+ sttager:2,
+
+  // ease: Power1.easeInOut
+ })
+ gsap.from('.mainlogo', {
+  y:90,
+ duration:2,
+ sttager:2,
+
+  // ease: Power1.easeInOut
+ })
+
+ gsap.from('#logo', {
+  x:90,
+ duration:2,
+ sttager:2,
+
+  // ease: Power1.easeInOut
+ })
+
+ gsap.from('.logo1', {
+  x:-90,
+ duration:2,
+ sttager:2,
+
+  // ease: Power1.easeInOut
+ })

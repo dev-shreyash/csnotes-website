@@ -214,12 +214,33 @@ span{
   letter-spacing: 0px;
 
 }
-.menu-items li a:hover {
-  font-weight:600;
-  padding: 0.1rem 0.2rem;
+/* .menu-items li a:hover {
+  /* font-weight:600; */
+  /* padding: 0.1rem 0.2rem; 
   transition: all 0.2s ease-in-out;
-  letter-spacing: 1.4px;
-  color: #6d16cb;
+  /* letter-spacing: 1px; *
+  color: #ffffff;
+  border-bottom: #6bffcb;
+} */
+.menu-items li a {
+  display: inline-block;
+  color: #ffffff;
+  text-decoration: none;
+  padding: auto;
+}
+
+.menu-items li a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #00BCD4;
+  transition: width .3s;
+}
+
+.menu-items li a:hover::after {
+  width: 100%;
+  /* transition: width .3s; */
 }
 .menu-items li a ul:hover ul {
   top: 70px;
@@ -230,7 +251,7 @@ span{
   align-items: center;
 }
 .fa-angle-down::before{
-position: absolute;
+/* position: absolute; */
 display: inline;
 padding: 5px 7px;
 content: "\f107";
@@ -476,7 +497,7 @@ svg {
   margin: 50px 0 -50px 0;
   right: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 50%);
   /* margin: auto; */
   /* width: 100%; */
   position: relative;
@@ -846,7 +867,7 @@ footer p{
     padding: 2rem;
     overflow-x: scroll;
     overflow-y:scroll ;
-    transform: translateY(100vh);
+    transform: translateY(-120vh);
     transition: transform 0.2s ease-out;
   }
   .menu-items.open {
@@ -872,7 +893,7 @@ footer p{
     flex-direction: column;
   }
   .fa-angle-down:before{
-    position: absolute;
+    /* position: absolute; */
     display: inline;
     /* margin: -25px 2px; */
   }
@@ -929,10 +950,10 @@ i.fas.fa-angle-right {
   transform:rotate(180deg) translate(-4px, 0px);;
   transition: transform 0.3s ease-in-out;
 }
-.header a:hover .fa-angle-down{
+/* .header a:hover .fa-angle-down{
   transform:rotate(90deg) translate(-25.8px, -5px);;
   transition: transform 0.3s ease-in-out;
-}
+} */
 /*
 @media screen and (max-width: 700px) {
   .search-form {
@@ -1411,7 +1432,7 @@ p.cs{
   margin: 0 auto;
   flex-wrap: wrap;
   display: flex;
-  max-width: 60rem;
+  max-width: 90rem;
 }
 .homepage {
   max-width: 30rem;
@@ -1420,7 +1441,7 @@ p.cs{
   display: flex;
   flex-wrap: wrap;
   width: 80%;
-  margin: 0 auto;
+  margin: 5vw auto;
   cursor: pointer;
 }
 .homepage p {
@@ -2595,4 +2616,32 @@ p.faq__answer {
   font-size: 18px;
   display: block;
 }
+}
+
+#content12 {
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; */
+  transition: opacity 0.5s, transform 2s;
+  opacity: 1;
+}
+
+.levitate {
+  animation: levitate 2s infinite;
+}
+
+.hidden {
+  opacity: 0;
+}
+@keyframes levitate {
+  0% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-80px);
+  }
+  100% {
+      transform: translateY(0);
+  }
 }
