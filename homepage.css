@@ -305,7 +305,7 @@ body {
   background-color: #4158D0;
 
 }
-.logo1{
+.logo{
   z-index: 1;
   margin: 20px;
 }
@@ -327,7 +327,7 @@ body {
 
   /* text-align: center; */
 }
-#logo{
+#logo1{
   animation: move linear 2000ms infinite;  
   margin: auto;
     filter: brightness(120%);
@@ -343,11 +343,11 @@ body {
   justify-content: center;
   padding: 40px,40px,25px, 25px;
 }
-#logo{
+#logo1{
   font-size: 70px;
 }
 
-.logo1{
+.logo{
   margin: auto;
 }
 .container12{
@@ -368,4 +368,7 @@ body {
   transition: all 0.3s ease-in-out;
   z-index: 999;
 
+}
+span{
+ color: #E91E63;
 }

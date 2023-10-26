@@ -150,6 +150,13 @@ for (var i = 0; i < 0; i++) {
 
   // ease: Power1.easeInOut
  })
+ gsap.from('.menu-btn', {
+  y:-90,
+ duration:2,
+ sttager:2,
+
+  // ease: Power1.easeInOut
+ })
 
  gsap.from('.log', {
   y:90,
@@ -166,7 +173,7 @@ for (var i = 0; i < 0; i++) {
   // ease: Power1.easeInOut
  })
 
- gsap.from('#logo', {
+ gsap.from('#logo1', {
   x:90,
  duration:2,
  sttager:2,
@@ -174,10 +181,38 @@ for (var i = 0; i < 0; i++) {
   // ease: Power1.easeInOut
  })
 
- gsap.from('.logo1', {
+ gsap.from('.logo', {
   x:-90,
  duration:2,
  sttager:2,
 
   // ease: Power1.easeInOut
  })
+
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
+ScrollTrigger.normalizeScroll(true)
+
+// create the smooth scroller FIRST!
+let smoother = ScrollSmoother.create({
+  wrapper: ".comment-container",
+  content: ".comment",
+  smooth: 0.5,
+  effects: true,
+  // normalizeScroll: true,
+  delay:2,
+  smoothTouch: 0.1,
+  delay:3
+});
+
+document.querySelector("button").addEventListener("click", e => {
+  // scroll to the spot where .box-c is in the center.
+  // parameters: element, smooth, position
+  smoother.scrollTo("#comment-form", true, "center center");
+  
+  // or you could animate the scrollTop:
+  gsap.to(smoother, {
+  	scrollTop: smoother.offset("#comment-form", "center center"),
+  	duration: 1
+  });
+});
