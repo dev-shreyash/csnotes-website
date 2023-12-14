@@ -147,9 +147,11 @@ for (var i = 0; i < 0; i++) {
   y:-90,
  duration:2,
  sttager:2,
-
+ delay:2,
+ opacity:0
   // ease: Power1.easeInOut
- })
+ }
+ )
  gsap.from('.menu-btn', {
   y:-90,
  duration:2,
@@ -162,13 +164,14 @@ for (var i = 0; i < 0; i++) {
   y:90,
  duration:2,
  sttager:2,
-
+ opacity:0
   // ease: Power1.easeInOut
  })
  gsap.from('.mainlogo', {
   y:90,
  duration:2,
  sttager:2,
+ opacity:0
 
   // ease: Power1.easeInOut
  })
@@ -177,6 +180,7 @@ for (var i = 0; i < 0; i++) {
   x:90,
  duration:2,
  sttager:2,
+ opacity:0
 
   // ease: Power1.easeInOut
  })
@@ -185,8 +189,8 @@ for (var i = 0; i < 0; i++) {
   x:-90,
  duration:2,
  sttager:2,
-
-  // ease: Power1.easeInOut
+ delay:2,
+ opacity:0
  })
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
@@ -214,5 +218,29 @@ document.querySelector("button").addEventListener("click", e => {
   gsap.to(smoother, {
   	scrollTop: smoother.offset("#comment-form", "center center"),
   	duration: 1
+  });
+});
+
+
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+
+let navs = gsap.utils.toArray("nav a");
+
+gsap.utils.toArray(".panel").forEach((panel, i) => {
+  let trigger = ScrollTrigger.create({
+    trigger: panel,
+    start: "top top", 
+    pin: true, 
+    pinSpacing: false 
+  });
+    
+  let nav = navs[i];
+  
+  nav.addEventListener("click", function(e) {
+    e.preventDefault();
+    gsap.to(window, {
+      duration: 1, 
+      scrollTo: trigger.start
+    });
   });
 });
