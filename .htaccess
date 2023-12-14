@@ -1,4 +1,0 @@
-AuthType Basic
-AuthName "Password Protected Area"
-AuthUserFile /workspaces/csnotes-website/.htpassword
-Require valid-user
