@@ -1,13 +1,13 @@
 #1.One-way Anova
 "one way anova"
-data1<-read.csv("Book1.csv",sep=",",header=T)
+data1<-read.csv("BookX.csv",sep=",",header=T)
 names(data1)
 str(data1)
 summary(data1)
 head(data1)
 anv1<-aov(formula=satindex~dept,data=data1)
 summary(anv1)
-Conclusion:Here dept value is not significant
+#Conclusion:Here dept value is not significant
 #2.Two-Way Anova
 "two way anova"
 data1<-read.csv("crop.data.csv",sep=",",header=T)
@@ -21,9 +21,11 @@ summary(anv1)
 #is not significant to determinating the yield.
 #Example:-
 data1<-read.csv("news.csv",sep=",",header=T)
+install.packages("readxl")
 library(readxl)
 mydata<-read_xlsx(file.choose())
 View(mydata)
 names(mydata)
 anv1<-aov(formula=Count~Day+Section,data=mydata)
 summary(anv1)
+
