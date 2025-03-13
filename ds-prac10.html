@@ -1,0 +1,9 @@
+data("iris")
+str("iris")
+head("iris")
+summary(iris)
+mypr<-prcomp(iris[,-5])
+mypr
+summary(mypr)
+plot(mypr,type="l")
+biplot(mypr)
