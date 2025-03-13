@@ -1,0 +1,53 @@
+db
+show databases
+use mydb
+db
+show databases
+db.createCollection("student")
+db.createCollection("emp",{capped:true, size: 1000})
+show dbs
+db.student.insert({RollNo:1, Name:"Akshay"})
+db.student.insert({RollNo:2, Name:"Shreya", Class:"Tycs"})
+db.student.insert({RollNo:3, Name:"Ramesh", Marks:"578"})
+db.student.insert({_id:101, RollNo:4, Name:"Laxmi", Marks:450, Hobbies: ["Reading", "Dancing"]})
+db.student.find()
+db.student.find().pretty()
+db.student.remove({})
+db.student.insert([
+  {Rollno:1, Name:"Akshay", Class:"Tycs", Marks:470},
+  {Rollno:2, Name:"Shreya", Class:"Fycs", Marks:365},
+  {Rollno:3, Name:"Mahesh", Class:"Sycs", Marks:521},
+  {Rollno:4, Name:"Neha", Class:"Fycs", Marks:484},
+  {Rollno:5, Name:"Ramesh", Class:"Tycs", Marks:580}
+])
+db.student.find().count()
+db.student.find({Class:"Tycs"}).pretty()
+db.student.find({Class:"Tycs"}, {Name:1, Class:1, _id:0})
+db.student.find({}, {Name:1, Class:1, _id:0})
+db.student.find().sort({Marks:1})
+db.student.find({}, {Name:1, Marks:1, _id:0}).sort({Marks:1})
+db.student.find({}, {Name:1, Marks:1, _id:0}).sort({Marks:-1})
+db.student.find({}, {Name:1, Marks:1, _id:0}).sort({Name:1})
+db.student.find({}, {Name:1, Marks:1, _id:0}).sort({Name:-1})
+db.student.find().limit(3)
+db.student.find().skip(2)
+db.student.find().skip(2).limit(3)
+db.student.find({Marks: {$gt: 500}})
+db.student.find({Marks: {$gte: 500}})
+db.student.find({Marks: {$lt: 500}})
+db.student.find({Marks: {$lte: 500}})
+db.student.find({Marks: {$eq: 521}})
+db.student.find({Marks: {$ne: 521}})
+db.student.find({Marks: {$in: [365, 470]}})
+db.student.find({Marks: {$nin: [365, 470]}})
+db.student.find({$and: [{Marks: {$gte: 400}}, {Class: "Tycs"}]})
+db.student.find({$or: [{Marks: {$gte: 500}}, {Class: "Fycs"}]})
+db.student.update({Rollno:1}, {$set: {Marks: 490}})
+db.student.update({Rollno:2}, {$set: {Class: "Tybcs"}})
+db.student.update({Rollno:3}, {$inc: {Marks: 10}})
+db.student.update({Rollno:5}, {$set: {Hobbies: ["Reading", "Singing"]}})
+db.student.updateMany({Class: "Fycs"}, {$set: {Class: "Sycs"}})
+db.student.deleteOne({Rollno:4})
+db.student.deleteMany({Class: "Tycs"})
+db.dropDatabase()
+db.student.drop()
