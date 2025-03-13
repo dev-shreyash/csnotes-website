@@ -1,0 +1,47 @@
+#Hypothesis testing
+
+#1.t-test testing
+#one sample t-test
+data<-read.csv("Book1.csv",sep=",",header=T)
+#"OR"
+mydata<-read.csv(file.choose(),sep=",",header=T)
+View(data)
+str(data)
+summary(data)
+boxplot(data)
+t.test(data$Time,mu=80,alternative="greater")
+t.test(data$Time,mu=90,alternative="greater")
+#Hypothesis testing is significant because p-value is less than 0.05.
+#2.Two sample T-test
+data<-read.csv("Book2.csv",sep=",",header=T)
+#"OR"
+mydata<-read.csv(file.choose(),sep=",",header=T)
+View(data)
+str(data)
+summary(data)
+boxplot(data)
+var.test(data$time_g1,data$time_g2,alternative="two.sided")
+#Hypothesis testing is not significant because p-value is greater than 0.05
+t.test(data$time_g1,data$time_g2,alternative="two.sided")
+#3.Paired test
+data<-read.csv("Book3.csv",sep=",",header=T)
+#"OR"
+mydata<-read.csv(file.choose(),sep=",",header=T)
+View(data)
+str(data)
+T.Y.B.SC.CS Sem VI Data Science Roll no-36
+summary(data)
+boxplot(data)
+t.test(data$time_before,data$time_after,alternative="greater",paired = T)
+#Hypothesis testing is significant because p -value is less than 0.05.
+  t.test(data$Test1,data$Test2, alternative = "less", paired = T)
+#Hypothesis testing is not significant because p-value is greater than 0.05.
+#4.Correlation test
+data<-read.csv("Book4.csv",sep=",",header=T)
+#"OR"
+mydata<-read.csv(file.choose(),sep=",",header=T)
+View(data)
+str(data)
+summary(data)
+cor.test(data$aptitude,data$job_prof,alternative="two.sided",method="pearson")
+#correlation testing is significant because p-value is less than 0.05.
