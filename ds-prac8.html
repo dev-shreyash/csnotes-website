@@ -1,0 +1,17 @@
+#K-means clustering on IRIS dataset
+data("iris")
+names(iris)
+newdata<-iris[,-5]
+head(newdata)
+fit<-kmeans(newdata,3)
+library(cluster)
+clusplot(newdata,fit$cluster,color=T,shade=T,labels=2,lines=0)
+fit
+fit$size
+#Hierarchical clustering on IRIS dataset
+clust<-hclust(dist(iris[,3:4]))
+plot(clust)
+clusterCut<-cutree(clust,3)
+table(clusterCut,iris$Species)
+clust<-hclust(dist(iris[,3:4]),method="average")
+plot(clust)
