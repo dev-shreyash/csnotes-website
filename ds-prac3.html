@@ -1,0 +1,27 @@
+#Simple/Multiple Linear Regression
+#1.Simple Linear Regression
+#"Simple regression"
+data<-read.csv("Book2.csv",sep=",",header = T)
+summary(data)
+str(data)
+fit<-lm(Weight~Height,data=data)
+summary(fit)
+plot(data$Height,data$Weight)
+abline(fit,lwd=3,col="red")
+#2.Multiple Linear Regression
+#"multiple regression"
+index<-read.csv(file.choose(),sep=",",header = T)
+summary(index)
+head(index)
+dim(index)
+names(index)
+modeltrain<-lm(index~written+language+tech+gk,data=index)
+summary(modeltrain)
+index$pred<-predict(modeltrain,index) #index is a dataframe name here
+head(index)
+modeltrain$residuals
+data("cars")
+dim(cars)
+index<-lm(dist~speed,data=cars)
+summary(index)
+plot(cars$speed,cars$dist)
