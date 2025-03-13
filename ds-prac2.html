@@ -1,3 +1,4 @@
+#students
 install.packages("dplyr")
 library(dplyr)
 student=read.csv(file.choose(), sep = ",", header = T)
@@ -34,3 +35,19 @@ summarise(grp,n())
 hist(student$Marks,xlab = "Marks Range",main="Histogram of student Marks")
 barplot(student$Marks,xlab = "student Marks",main = "Barplot of student Marks")
 boxplot(student$Marks)
+
+  
+#Rainfall
+data=read.csv(file.choose(), sep = ",", header = T)
+View(data)
+plot(data$Year, data$rainfall, type= "l", col = "red", lwd=3)
+plot(data$Year, data$Population, type= "l",lty="dotted", col = "red", lwd=3)
+data("mtcars")
+View(mtcars)
+install.packages("corrplot")
+library(corrplot)
+M=cor(mtcars)
+corrplot(M, method = "ellipse")
+corrplot(M, method = "ellipse", col="red")
+data("iris")
+plot(iris$Petal.Length,iris$Petal.Width,col=iris$Species,pch=15)
